@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Appifest</string>
+
+    <string name="log_into_yo">Hello.\nWelcome Back</string>
+    <string name="or_log_in_w">or Login with</string>
+    <string name="email_hint">Email</string>
+    <string name="pass_hint">Password</string>
+    <string name="forgot_pass">Forgot Password?</string>
+    <string name="login_gog">Login with Google</string>
+    <string name="login_fb">Register with Facebook</string>
+    <string name="signUp_txt">Signup</string>
+
+</resources>

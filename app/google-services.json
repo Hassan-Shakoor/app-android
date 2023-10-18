@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380834882211",
+    "project_id": "appifest",
+    "storage_bucket": "appifest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380834882211:android:eba459016eeba15b905516",
+        "android_client_info": {
+          "package_name": "com.appifest.fashion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0Vtkdkr23jPbZwH230nI7N1PufEi98uQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

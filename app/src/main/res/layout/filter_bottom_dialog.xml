@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:id="@+id/brands"
+            style="@style/filter_bottom_sheet_title"
+            android:text="Brands"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brandRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brands"
+            tools:listitem="@layout/item_brands" />
+
+        <TextView
+            android:id="@+id/tvCategories"
+            style="@style/filter_bottom_sheet_title"
+            android:text="Categories"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/brandRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoriesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategories"
+            tools:listitem="@layout/item_categories" />
+
+        <TextView
+            android:id="@+id/tvPriceRange"
+            style="@style/filter_bottom_sheet_title"
+            android:text="Price Range"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoriesRecyclerView" />
+
+        <SeekBar
+            android:id="@+id/priceRangeBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:outlineSpotShadowColor="#D9D9D9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMinimumRange" />
+
+        <TextView
+            android:id="@+id/tvMinimumRange"
+            style="@style/filter_bottom_sheet_title"
+            android:layout_width="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="0dp"
+            android:text="$0"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/tvMaximumRange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceRange" />
+
+        <TextView
+            android:id="@+id/tvMaximumRange"
+            style="@style/filter_bottom_sheet_title"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="$100"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMinimumRange"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvMinimumRange"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvSize"
+            style="@style/filter_bottom_sheet_title"
+            android:text="Size"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceRangeBar" />
+
+        <TextView
+            android:id="@+id/tvSmallSize"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="S"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSize" />
+
+        <TextView
+            android:id="@+id/tvMediumSize"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:text="M"
+            app:layout_constraintBottom_toBottomOf="@+id/tvSmallSize"
+            app:layout_constraintStart_toEndOf="@+id/tvSmallSize"
+            app:layout_constraintTop_toTopOf="@+id/tvSmallSize" />
+
+        <TextView
+            android:id="@+id/tvLargeSize"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:text="L"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMediumSize"
+            app:layout_constraintStart_toEndOf="@+id/tvMediumSize"
+            app:layout_constraintTop_toTopOf="@+id/tvMediumSize" />
+
+        <TextView
+            android:id="@+id/tvExtraLargeSize"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:text="XL"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLargeSize"
+            app:layout_constraintStart_toEndOf="@+id/tvLargeSize"
+            app:layout_constraintTop_toTopOf="@+id/tvLargeSize" />
+
+        <TextView
+            android:id="@+id/tvRating"
+            style="@style/filter_bottom_sheet_title"
+            android:text="Rating"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLargeSize" />
+
+        <TextView
+            android:id="@+id/tvOne"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+        <TextView
+            android:id="@+id/tvTwo"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOne"
+            app:layout_constraintStart_toEndOf="@+id/tvOne"
+            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+        <TextView
+            android:id="@+id/tvThree"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="3"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTwo"
+            app:layout_constraintStart_toEndOf="@+id/tvTwo"
+            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+        <TextView
+            android:id="@+id/tvFour"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="4"
+            app:layout_constraintBottom_toBottomOf="@+id/tvThree"
+            app:layout_constraintStart_toEndOf="@+id/tvThree"
+            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+        <TextView
+            android:id="@+id/tvFive"
+            style="@style/filter_bottom_sheet_text"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:text="5"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFour"
+            app:layout_constraintStart_toEndOf="@+id/tvFour"
+            app:layout_constraintTop_toBottomOf="@+id/tvRating" />
+
+        <TextView
+            android:id="@+id/tvReset"
+            style="@style/filter_bottom_sheet_text"
+            android:paddingHorizontal="70dp"
+            android:text="Reset"
+            android:layout_marginTop="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvDone"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOne" />
+
+        <TextView
+            android:id="@+id/tvDone"
+            style="@style/filter_bottom_sheet_text"
+            android:backgroundTint="#BD2EB8"
+            android:paddingHorizontal="70dp"
+            android:layout_marginTop="50dp"
+            android:text="Done"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tvReset"
+            app:layout_constraintTop_toBottomOf="@+id/tvFive" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

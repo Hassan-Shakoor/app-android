@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="log_into_yo">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">#BD2EB8</item>
+    </style>
+
+    <style name="or_log_in_w">
+        <item name="android:textSize">
+            20sp
+        </item>
+        <item name="android:textColor">
+            #959595
+        </item>
+    </style>
+    <style name="forg_pass">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="btn_login_opt">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="sign_up">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+
+
+</resources>
